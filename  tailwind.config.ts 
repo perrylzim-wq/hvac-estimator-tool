@@ -1,0 +1,21 @@
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}'],
+  theme: {
+    extend: {
+      colors: {
+        paper: '#faf6f0',
+        ink: '#1c1a18',
+        rust: '#c44a1f',
+        pine: '#4a6741'
+      },
+      fontFamily: {
+        fraunces: ['Fraunces', 'serif'],
+        mono: ['"JetBrains Mono"', 'monospace']
+      }
+    },
+  },
+  plugins: [],
+}
+export default config
