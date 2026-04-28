@@ -1,0 +1,25 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const meta Metadata = {
+  title: 'NoCo HVAC Estimator',
+  description: 'Cold-climate bundles + rebate stacking',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className + ' bg-[#faf6f0] text-[#1c1a18] font-[Archivo] antialiased'}>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Archivo:wght@400;600&family=JetBrains+Mono&display=swap" rel="stylesheet"/>
+        {children}
+      </body>
+    </html>
+  )
+}
