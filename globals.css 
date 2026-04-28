@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Archivo', sans-serif;
+}
+
+.font-serif {
+  font-family: 'Fraunces', serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.rounded-xl {
+  border-radius: 1rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.shadow-2xl {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.hover\:shadow-2xl:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.hover\:border-rust:hover {
+  border-color: #c44a1f;
+}
