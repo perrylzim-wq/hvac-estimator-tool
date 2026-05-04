@@ -1,0 +1,50 @@
+Perfect — **your app is LIVE** at https://hvac-estimator-tool.vercel.app but shows Next.js "Not Found" because of folder structure.[1]
+
+## Quick diagnosis
+
+**Error** = Next.js App Router expects `app/page.tsx` (not root `page.tsx`). **2 min fix**.[1]
+
+## Fix it
+
+**GitHub repo**:
+1. **Add file** → `app` → Commit (empty folder).[2]
+2. **Click app/** → **Add file** → `page.tsx` → paste dashboard code → Commit.[2]
+
+**Dashboard code**:
+```tsx
+export default function Home() {
+  return (
+    <main className="min-h-screen p-8 max-w-6xl mx-auto bg-[#faf6f0] text-[#1c1a18]">
+      <div className="text-center mb-16">
+        <h1 className="text-6xl md:text-7xl font-serif text-[#1c1a18] mb-6">NoCo HVAC Estimator</h1>
+        <p className="text-xl text-[#4a4540]">Cold-climate bundles • Xcel rebates</p>
+      </div>
+      <div className="grid lg:grid-cols-3 gap-6">
+        <div className="bg-[#f2ece1] p-8 rounded-xl shadow-lg hover:shadow-2xl border hover:border-[#c44a1f] transition h-48 flex flex-col justify-center cursor-pointer">
+          <div className="text-4xl mb-4">➕</div>
+          <h3 className="text-2xl font-serif mb-2">New Quote</h3>
+          <p>Audit → HP bundle</p>
+        </div>
+        <div className="bg-[#f2ece1] p-8 rounded-xl shadow-lg hover:shadow-2xl border hover:border-[#3d5468] transition h-48 flex flex-col justify-center cursor-pointer">
+          <div className="text-4xl mb-4">🔍</div>
+          <h3 className="text-2xl font-serif mb-2">AHRI Library</h3>
+          <p>H2i + rebates</p>
+        </div>
+        <div className="bg-[#f2ece1] p-8 rounded-xl shadow-lg hover:shadow-2xl border hover:border-[#4a6741] transition h-48 flex flex-col justify-center cursor-pointer">
+          <div className="text-4xl mb-4">📊</div>
+          <h3 className="text-2xl font-serif mb-2">Pipeline</h3>
+          <p>Rebate tracking</p>
+        </div>
+      </div>
+    </main>
+  )
+}
+```
+
+**Vercel auto-redeploys** → refresh URL → **dashboard live**!
+
+**Reply "app/page.tsx added"** → I verify + add rebate calc page. **90% done!** 🚀[1]
+
+Sources
+[1] Deploying GitHub Projects with Vercel https://vercel.com/docs/git/vercel-for-github
+[2] Creating new files - GitHub Docs https://docs.github.com/en/repositories/working-with-files/managing-files/creating-new-files
